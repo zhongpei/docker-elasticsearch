@@ -10,6 +10,7 @@ FROM elasticsearch:1.7
 
 
 RUN plugin install elasticsearch/elasticsearch-analysis-smartcn/2.7.0
+RUN plugin install elasticsearch/marvel/latest
 
 
 # Expose ports for each Mongo replica set instance
