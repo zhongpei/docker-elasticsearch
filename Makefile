@@ -1,2 +1,2 @@
 all:
-	docker build -t="zhongpei/elasticsearch:2" .
+	docker build -t="zhongpei/elasticsearch" .
