@@ -5,12 +5,13 @@
 #
 
 # Pull base image.
-FROM elasticsearch:1.7
+FROM elasticsearch:2
 
 
 
-RUN plugin install elasticsearch/elasticsearch-analysis-smartcn/2.7.0
-RUN plugin install elasticsearch/marvel/latest
+RUN plugin install elasticsearch/marvel/latest \
+	&& bin/plugin install elasticsearch/license/latest \
+	&& bin/plugin install elasticsearch/shield/latest
 
 
 # Expose ports for each Mongo replica set instance
